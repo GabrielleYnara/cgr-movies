@@ -10,7 +10,7 @@ public class Movie {
 
     public enum MovieStatus {
         WATCHED, ON_HOLD, DROPPED, WATCHING, WISHLIST
-    }//TODO-------------------------------------------
+    }
 
     @Id
     @Column
@@ -52,14 +52,6 @@ public class Movie {
         this.description = description;
         this.genre = genre;
         this.rating = rating;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
