@@ -37,8 +37,7 @@ public class MovieController {
             message.put("data", newMovie);
             return new ResponseEntity<>(message, HttpStatus.CREATED);
         } else {
-            message.put("message", "Movie cannot be created");
-            return new ResponseEntity<>(message, HttpStatus.CONFLICT);
+            return new ResponseEntity<>(message.put("message", "Movie cannot be created"), HttpStatus.CONFLICT);
         }
     }
 
@@ -119,8 +118,7 @@ public class MovieController {
             message.put("data", movieList);
             return new ResponseEntity<>(message, HttpStatus.OK);
         } else {
-            message.put("message", "Movie list cannot be retrieved");
-            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(message.put("message", "Movie list cannot be retrieved"), HttpStatus.NOT_FOUND);
         }
     }
 
